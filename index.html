@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Мои социальные сети и контакты. Найдите меня во всех платформах.">
+    <meta name="keywords" content="социальные сети, контакты, Instagram, Telegram, LinkedIn, GitHub, YouTube">
+    <meta name="author" content="Ваше имя">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a1a2e">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Мои социальные сети">
+    <meta property="og:description" content="Найдите меня во всех платформах">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Social+Links">
+    <meta property="og:url" content="https://example.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Мои социальные сети">
+    <meta name="twitter:description" content="Найдите меня во всех платформах">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=Social+Links">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a1a2e' width='100' height='100'/><text x='50' y='65' text-anchor='middle' font-size='60' font-weight='bold' fill='%2300d4ff'>@</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <title>Мои контакты | Социальные сети</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #ff006e;
+            --bg-dark: #0f0f1e;
+            --bg-card: #1a1a2e;
+            --text-light: #e0e0ff;
+            --text-muted: #a0a0b0;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 50%, #0f1a2e 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-attachment: fixed;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+            animation: gradientShift 15s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background: 
+                    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.1) 0%, transparent 50%);
+            }
+            50% {
+                background: 
+                    radial-gradient(circle at 30% 60%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 70%, rgba(240, 147, 251, 0.15) 0%, transparent 50%);
+            }
+        }
+
+        body > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Header Section */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            background: var(--gradient-hero);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            border: 3px solid var(--primary-color);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            line-height: 1.6;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Social Links Section */
+        .social-section {
+            width: 100%;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .social-label {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-2);
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        .social-link:hover::before {
+            left: 0;
+        }
+
+        .social-link:hover {
+            transform: translateX(8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(240, 147, 251, 0.2);
+        }
+
+        .social-link-content {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex: 1;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover .social-icon {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .social-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .social-status {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .social-arrow {
+            font-size: 18px;
+            transition: all 0.3s ease;
+            color: var(--primary-color);
+        }
+
+        .social-link:hover .social-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+            font-size: 13px;
+            color: var(--text-muted);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .bio {
+                font-size: 15px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+
+            .social-link {
+                padding: 14px 18px;
+            }
+
+            .social-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 18px;
+            }
+
+            .social-name {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 30px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 12px;
+                min-height: auto;
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+
+            h1 {
+                font-size: 26px;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 12px;
+            }
+
+            .bio {
+                font-size: 14px;
+                margin-bottom: 12px;
+            }
+
+            .profile-section {
+                margin-bottom: 40px;
+            }
+
+            .profile-image {
+                width: 90px;
+                height: 90px;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .social-link {
+                padding: 12px 14px;
+                border-radius: 10px;
+            }
+
+            .social-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+
+            .social-name {
+                font-size: 14px;
+            }
+
+            .social-status {
+                font-size: 11px;
+            }
+
+            .social-arrow {
+                font-size: 16px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                font-size: 12px;
+            }
+        }
+
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-image">👤</div>
+            <p class="subtitle">Добро пожаловать</p>
+            <h1>Ваше имя</h1>
+            <p class="bio">
+                Веб-разработчик, дизайнер и энтузиаст. 
+                Люблю создавать красивые и функциональные цифровые решения.
+            </p>
+        </div>
+
+        <!-- Social Links Section -->
+        <div class="social-section">
+            <div class="social-label">Найдите меня в сети</div>
+            
+            <div class="social-links">
+                <!-- Instagram -->
+                <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <div class="social-link-content">
+                        <div class="social-icon">📷</div>
+                        <div>
+                            <div class="social-name">Instagram</div>
+                            <div class="social-status">@yourusername</div>
+                        </div>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <!-- Telegram -->
+                <a href="https://t.me/yourusername" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <div class="social-link-content">
+                        <div class="social-icon">✈️</div>
+                        <div>
+                            <div class="social-name">Telegram</div>
+                            <div class="social-status">@yourusername</div>
+                        </div>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <div class="social-link-content">
+                        <div class="social-icon">💼</div>
+                        <div>
+                            <div class="social-name">LinkedIn</div>
+                            <div class="social-status">Professional Profile</div>
+                        </div>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <div class="social-link-content">
+                        <div class="social-icon">💻</div>
+                        <div>
+                            <div class="social-name">GitHub</div>
+                            <div class="social-status">Code & Projects</div>
+                        </div>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://youtube.com/@yourchannel" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <div class="social-link-content">
+                        <div class="social-icon">🎬</div>
+                        <div>
+                            <div class="social-name">YouTube</div>
+                            <div class="social-status">@yourchannel</div>
+                        </div>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Все права защищены. Made with ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add ripple effect on click
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Only create ripple for non-link clicks (visual effect)
+                if (e.target.closest('.social-link')) {
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('ripple');
+                    
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => ripple.remove(), 600);
+                }
+            });
+        });
+
+        // Smooth scroll animation for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Animate elements on page load
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.social-link').forEach((link, index) => {
+                link.style.animation = `fadeInUp 0.6s ease-out ${0.3 + index * 0.1}s both`;
+            });
+        });
+
+        // Add active state tracking
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mousedown', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+
+            link.addEventListener('mouseup', function() {
+                this.style.transform = '';
+            });
+
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>
